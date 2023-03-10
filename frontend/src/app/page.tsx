@@ -1,27 +1,32 @@
+"use client";
+import React, { useState } from 'react';
 import { BsFillMoonFill } from 'react-icons/bs';
 import { SiUpwork, SiInstagram, SiMedium, SiYoutube } from 'react-icons/si';
 import Image from 'next/image';
 import headshot from '../../public/portfolio.jpg';
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <main className='bg-white  px-10 text-black min-h-screen'>
-    <section className='h-16 fixed top-0 w-full z-50 bg-white bg-opacity-100 '>
-      <nav className='py-10 flex justify-between'>
-          <h1 className='text-2xl hover:text-teal-700 font-orbitron'>
+    <div className={darkMode ? "dark" : ""}>
+    <main className='bg-white text-black min-h-screen dark:bg-slate-600 dark:text-white px-10'>
+    <section className='h-16 fixed top-0 w-full z-50 bg-opacity-100 bg-white dark:bg-slate-600'>
+      <nav className='mr-10 py-10 flex justify-between'>
+          <h1 className='text-2xl hover:text-teal-700 font-orbitron dark:hover:text-teal-400'>
             <a href='#intro'>
               StanleyCodes
             </a>
           </h1>
           <ul className='flex items-center space-x-3 mr-16 font-sans'>
-            <li className='hover:text-teal-700'> <BsFillMoonFill /></li>
-            <li className='hover:text-teal-700'><a> Services </a></li>
-            <li className='hover:text-teal-700'><a> Experience </a></li>
-            <li className='hover:text-teal-700'><a> Socials </a></li>
+            <li className='hover:text-teal-700 dark:hover:text-teal-400'> <BsFillMoonFill
+            onClick={() => setDarkMode(!darkMode)} /></li>
+            <li className='hover:text-teal-700 dark:hover:text-teal-400'><a href='#services'> Services </a></li>
+            <li className='hover:text-teal-700 dark:hover:text-teal-400'><a href='#experience'> Experience </a></li>
+            <li className='hover:text-teal-700 dark:hover:text-teal-400'><a href='#socials'> Socials </a></li>
           </ul>
       </nav>
       </section>
-      <section id='intro' className='mt-20'>
+      <section id='intro' className='scroll-mt-20 pt-20 mb-8'>
           <div className='relative mx-auto w-80 h-80'>
             <Image
               src={headshot}
@@ -31,10 +36,10 @@ export default function Home() {
             />
           </div>
         <div className='text-center'>
-          <h2 className='text-3xl hover:text-teal-700'>
+          <h2 className='text-3xl hover:text-teal-700 dark:hover:text-teal-400'>
             Stanley Armstrong
           </h2>
-          <h3 className='text-md text-gray-500 hover:text-orange-500'>
+          <h3 className='text-md text-gray-500 dark:text-white dark:hover:text-yellow-300 hover:text-orange-500'>
             Software and Data Engineer
           </h3>
           <p className='px-6 font-light'>
@@ -50,13 +55,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='mt-8'>
-        <h2 className='text-3xl mb-6 hover:text-teal-700'>
+      <section id='services' className='mt-8 scroll-mt-20'>
+        <h2 className='text-3xl mb-6 hover:text-teal-700 dark:hover:text-teal-400'>
           Services Offered
         </h2>
-        <div className='flex justify-evenly'>
-          <div className='flex-1 px-5'>
-            <h2 className='text-2xl hover:text-teal-700'>
+        <div className='lg:flex-row flex flex-col justify-evenly '>
+          <div className='shadow-lg rounded-xl flex-1 p-10'>
+            <h2 className='text-2xl hover:text-teal-700 dark:hover:text-teal-400'>
               Database Development
             </h2>
             <p className='font-light'>
@@ -65,9 +70,15 @@ export default function Home() {
             <p className='font-light'>
               Good news! You have found the correct person to help you with any of those problems. With experience as a Data Engineer, I have designed and improved data architecture, implemented ETL data pipelines with Apache Airflow and Spark, and have built out custom dashboards modeled from SQL queries and have built out dashboards in Power BI. Data and database engineering is something I am very passionate and I can help take your data project to the next step!
             </p>
+            <p>
+              Tools I Use:
+            </p>
+            <p className='font-light'>
+              Apache Airflow, PySpark, Pandas, MySQL, PostgreSQL, AWS S3, Google Cloud Storage, BigQuery, Google CloudSQL, and PowerBI
+            </p>
           </div>
-          <div className='flex-1 px-5'>
-            <h2 className='text-2xl hover:text-teal-700'>
+          <div className='shadow-lg rounded-xl flex-1 p-10'>
+            <h2 className='text-2xl hover:text-teal-700 dark:hover:text-teal-400'>
               Web and App Development
             </h2>
             <p className='font-light'>
@@ -76,6 +87,12 @@ export default function Home() {
             <p className='font-light'>
               You are in luck my friend! I can provide you with a quality website or app from the design phase all the way to production. My experience as a Software Engineer has taught me how to utilize modern web frameworks such as React and Django to build applications that will scale for your use case. Backend not in Python? I have experience with Java's Spring Boot as well and be resource on the backend. Let me help you get your web app to the next level! 
             </p>
+            <p>
+              Tools I Use:
+            </p>
+            <p className='font-light'>
+              React, React Native, Django, Flask, Spring Boot, and Figma
+            </p>
           </div>
         </div>
         <div className='text-l mt-5'>
@@ -83,7 +100,7 @@ export default function Home() {
               If interested, feel free to book a <span className='font-normal'> free </span> session with me!
             </p>
         <div className='text-xl flex justify-center'>
-          <button className='bg-teal-700 text-white rounded-full px-4'>
+          <button className='bg-teal-700 text-white rounded-full px-4 dark:bg-teal-400'>
             <a href='https://calendly.com/stanleyarmstrong31/30min'>
             Book Now
             </a>
@@ -94,28 +111,32 @@ export default function Home() {
 
       </section>
 
-      <section id='experience' className='mt-8'>
-        <h2 className='text-left text-3xl hover:text-teal-700'>
+      <section id='experience' className='mt-8 scroll-mt-20'>
+        <h2 className='text-left text-3xl hover:text-teal-700 dark:hover:text-teal-400'>
           Previous Experience
         </h2>
-        <h3 className='text-2xl mt-3 hover:text-teal-700'>
+        <div className='p-10'>
+        <h3 className='text-2xl mt-3 hover:text-teal-700 dark:hover:text-teal-400'>
           Advana
         </h3>
-        <h3 className='text-md text-gray-500 hover:text-orange-500'>
+        <h3 className='text-md text-gray-500 hover:text-orange-500 dark:text-white dark:hover:text-yellow-300'>
           Data Engineer
         </h3>
         <p className='font-light'>
           During my time at Advana, I decided to embark on a different path of Software Engineering and enter the world of Data Engineering. At Advana, I was able to grow my understanding of database modeling and learn ETL and ELT best practices. Advana allowed me a large space to grow as a developer and develop the confidence needed to become a free-lancer data engineer.
         </p>
-        <h3 className='text-2xl hover:text-teal-700'>
+        </div>
+        <div className='p-10'>
+        <h3 className='text-2xl hover:text-teal-700 dark:hover:text-teal-400'>
           Promaxo
         </h3>
-        <h3 className='text-md text-gray-500 hover:text-orange-500'>
+        <h3 className='text-md text-gray-500 hover:text-orange-500 dark:text-white dark:hover:text-yellow-300'>
           Software Engineer
         </h3>
         <p className='font-light'>
           During my stint at the startup in Oakland, I was able to grow my skills in Python and React and learn more about cloud services and embedded systems. My team and I focused on improving the UI and UX of the MRI, features of an accompanying web app, and improvements to manufacturing processes. This role was a great opportunity to see how successful startups operate.
         </p>
+        </div>
       </section>
       <section id='socials' className='mt-6'>
         <div className=''>
@@ -134,5 +155,6 @@ export default function Home() {
         <p> Designed and Created By <span className='font-orbitron'> StanleyCodes</span></p>
       </footer>
     </main>
+    </div>
   )
 };

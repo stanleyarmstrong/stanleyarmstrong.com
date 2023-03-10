@@ -5,7 +5,10 @@ const nextConfig = {
   },
   images: {
     loader: "akamai",
-    path: "/"
+    path: "/",
+    domains: [
+      'www.stanleyarmstrong.com'
+    ]
   },
 }
 

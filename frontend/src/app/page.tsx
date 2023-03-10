@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { BsFillMoonFill } from 'react-icons/bs';
 import { SiUpwork, SiInstagram, SiMedium, SiYoutube } from 'react-icons/si';
 import Image from 'next/image';
-import headshot from '../../public/portfolio.jpg';
+import headshot from '../../public/static/images/portfolio.jpg';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);

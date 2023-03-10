@@ -9,8 +9,8 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   return (
     <div className={darkMode ? "dark" : ""}>
-    <main className='bg-white text-black min-h-screen dark:bg-slate-600 dark:text-white px-10'>
-    <section className='h-16 fixed top-0 w-full z-50 bg-opacity-100 bg-white dark:bg-slate-600'>
+    <main className='bg-white text-black min-h-screen dark:bg-slate-800 dark:text-white px-10'>
+    <section className='h-16 fixed top-0 w-full z-50 bg-opacity-100 bg-white dark:bg-slate-800'>
       <nav className='mr-10 py-10 flex justify-between'>
           <h1 className='text-2xl hover:text-teal-700 font-orbitron dark:hover:text-teal-400'>
             <a href='#intro'>
@@ -85,7 +85,7 @@ export default function Home() {
               Do you have a new idea for an app or website? Maybe your existing app has a bug that needs fixing? Or maybe you want to add new features to your app?
             </p>
             <p className='font-light'>
-              You are in luck my friend! I can provide you with a quality website or app from the design phase all the way to production. My experience as a Software Engineer has taught me how to utilize modern web frameworks such as React and Django to build applications that will scale for your use case. Backend not in Python? I have experience with Java's Spring Boot as well and be resource on the backend. Let me help you get your web app to the next level! 
+              You are in luck my friend! I can provide you with a quality website or app from the design phase all the way to production. My experience as a Software Engineer has taught me how to utilize modern web frameworks such as React and Django to build applications that will scale for your use case. Backend not in Python? I have experience with Java&apos;s Spring Boot as well and be resource on the backend. Let me help you get your web app to the next level! 
             </p>
             <p>
               Tools I Use:

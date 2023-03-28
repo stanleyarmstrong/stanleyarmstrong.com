@@ -2,11 +2,20 @@
 import React, { useState } from 'react';
 import { BsFillMoonFill } from 'react-icons/bs';
 import { SiUpwork, SiInstagram, SiMedium, SiYoutube } from 'react-icons/si';
+import { RxHamburgerMenu, RxCross1} from 'react-icons/rx';
 import Image from 'next/image';
 import headshot from '../../public/static/images/portfolio.jpg';
 
+const NavButton = (isNavOpen: boolean) => {
+  if (isNavOpen) {
+    return  <RxCross1 />
+  }
+  return <RxHamburgerMenu />
+}
+
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <div className={darkMode ? "dark" : ""}>
     <main className='bg-white text-black min-h-screen dark:bg-slate-800 dark:text-white px-10'>
@@ -17,7 +26,29 @@ export default function Home() {
               StanleyCodes
             </a>
           </h1>
-          <ul className='flex items-center space-x-3 mr-16 font-sans'>
+
+          <section className='flex flex-col items-center justify-between lg:hidden text-2xl'>
+            <button className='hover:text-teal-700' onClick = {() => setIsNavOpen(!isNavOpen)} >
+              {
+                NavButton(isNavOpen)
+              }
+            </button>
+            <div className={isNavOpen ? 'flex' : 'hidden'}>
+              <ul className='flex flex-col items-center justify-center my-2'>
+                <li className='hover:text-teal-700 dark:hover:text-teal-400'> <BsFillMoonFill
+            onClick={() => setDarkMode(!darkMode)} /></li>
+              <li className='hover:text-teal-700 dark:hover:text-teal-400'><a href='#services'> Services </a></li>
+              <li className='hover:text-teal-700 dark:hover:text-teal-400'><a href='#experience'> Experience </a></li>
+              <li className='hover:text-teal-700 dark:hover:text-teal-400'><a href='#socials'> Socials </a></li>
+
+              </ul>
+
+            </div>
+
+
+          </section>
+          
+          <ul className='hidden lg:flex items-center space-x-3 mr-16 font-sans'>
             <li className='hover:text-teal-700 dark:hover:text-teal-400'> <BsFillMoonFill
             onClick={() => setDarkMode(!darkMode)} /></li>
             <li className='hover:text-teal-700 dark:hover:text-teal-400'><a href='#services'> Services </a></li>

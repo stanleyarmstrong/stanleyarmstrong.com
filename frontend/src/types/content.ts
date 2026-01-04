@@ -13,6 +13,7 @@ export interface Experience {
 
 export interface Service {
   title: string;
+  reviews: string[];
   description: string[];
   tools: string[];
 }

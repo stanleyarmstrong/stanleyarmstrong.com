@@ -11,6 +11,35 @@ export interface SocialsCardProps {
   hoverColor: string;
 }
 
+export interface ServiceCardProps {
+  title: string;
+  reviews: string[];
+  description: string[];
+  tools: string[];
+}
+
+export function ServiceCard({ title, reviews, description, tools }: ServiceCardProps) {
+    return (
+          <div className='shadow-lg rounded-xl flex-1 p-10'>
+            <h2 className='text-2xl hover:text-teal-700 dark:text-white dark:hover:text-teal-400'>
+              {title}
+            </h2>
+              {reviews.map((review, index) => (
+                <p className='font-light' key={`${title}-reviews-${index}`}>{review}</p>
+            ))}
+            {description.map((desc, index) => (
+                <p className='font-light' key={`${title}-description-${index}`}>{desc}</p>
+            ))}
+            <p>
+              Tools I Use:
+            </p>
+            <p className='font-light'>
+              {tools.join(', ')}
+            </p>
+          </div>
+    )
+}
+
 export function ExperienceCard({ company, title, description }: ExperienceCardProps) {
     return (
         <div className='p-5'>

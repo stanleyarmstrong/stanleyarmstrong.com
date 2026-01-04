@@ -4,7 +4,7 @@ import { BsFillMoonFill } from 'react-icons/bs';
 import Image from 'next/image';
 import headshot from '../../public/static/images/portfolio.jpg';
 import { GitHubCalendar } from 'react-github-calendar';
-import { ExperienceCard, NavItems, SocialsCard } from './components/landing_page';
+import { ExperienceCard, NavItems, SocialsCard, ServiceCard } from './components/landing_page';
 import { ContentData } from '@/types/content';
 
 export default function Home() {
@@ -72,44 +72,13 @@ export default function Home() {
           Services Offered
         </h2>
         <div className='lg:flex-row flex flex-col justify-evenly '>
-          <div className='shadow-lg rounded-xl flex-1 p-10'>
-            <h2 className='text-2xl hover:text-teal-700 dark:text-white dark:hover:text-teal-400'>
-              Database Development
-            </h2>
-            <p className='font-light'>
-              Does your current data solution need a redesign? Maybe your data architecture is fine, but you need automated pipelines to run? Or just need quick SQL reports built out and put on a dashboard?
-            </p>
-            <p className='font-light'>
-              Good news! You have found the correct person to help you with any of those problems. With experience as a Data Engineer, I have designed and improved data architecture, implemented ETL data pipelines with Apache Airflow and Spark, and have built out custom dashboards modeled from SQL queries and have built out dashboards in Power BI. Data and database engineering is something I am very passionate and I can help take your data project to the next step!
-            </p>
-            <p>
-              Tools I Use:
-            </p>
-            <p className='font-light'>
-              Apache Airflow, PySpark, Pandas, MySQL, PostgreSQL, AWS S3, Google Cloud Storage, BigQuery, Google CloudSQL, and PowerBI
-            </p>
-          </div>
-          <div className='shadow-lg rounded-xl flex-1 p-10'>
-            <h2 className='text-2xl hover:text-teal-700 dark:text-white dark:hover:text-teal-400'>
-              Web and App Development
-            </h2>
-            <p className='font-light'>
-              Do you have a new idea for an app or website? Maybe your existing app has a bug that needs fixing? Or maybe you want to add new features to your app?
-            </p>
-            <p className='font-light'>
-              You are in luck my friend! I can provide you with a quality website or app from the design phase all the way to production. My experience as a Software Engineer has taught me how to utilize modern web frameworks such as React and Django to build applications that will scale for your use case. Backend not in Python? I have experience with Java&apos;s Spring Boot as well and be resource on the backend. Let me help you get your web app to the next level! 
-            </p>
-            <p>
-              Tools I Use:
-            </p>
-            <p className='font-light'>
-              React, React Native, Django, Flask, Spring Boot, and Figma
-            </p>
-          </div>
+          {content?.services?.map((service, index) => (
+            <ServiceCard key={`services-${index}`} title={service.title} reviews={service.reviews} description={service.description} tools={service.tools} />
+          ))}
         </div>
         <div className='text-l mt-5'>
             <p className='font-light text-center mb-2'>
-              I'd love to connect more with you! Feel free to book a time to chat with me!
+              Book a time with me:
             </p>
         <div className='text-xl flex justify-center'>
           <button className='bg-teal-700 hover:bg-orange-500 text-white rounded-xl font-semibold dark:bg-teal-400 dark:hover:bg-yellow-300 px-4'>

@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <>
-    <main className='bg-white text-black min-h-screen dark:bg-[#28303B] dark:text-white px-10'>
+    <main className='bg-white text-black min-h-screen dark:bg-[#28303B] dark:text-white px-10 pb-5'>
     <section className='fixed top-0 w-full mt-3'>
       <nav className='flex justify-between items-center'>
           <h1 className='text-2xl bg-white dark:bg-[#28303B] hover:text-teal-700 font-orbitron dark:text-white dark:hover:text-teal-400'>
@@ -50,8 +50,8 @@ export default function Home() {
       </nav>
       </section>
       <section id='intro' className='scroll-mt-32 pt-32 mb-8'>
-        <div className='w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-10 px-6'>
-          <div className='flex flex-col flex-1'>
+        <div className='w-full max-w-6xl mx-auto flex flex-col justify-center lg:flex-row items-start lg:items-start gap-20 px-6'>
+          <div>
             <div className='relative w-70 h-70 overflow-hidden rounded-full '>
               <Image
                 src={headshot}
@@ -61,8 +61,11 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className='w-full lg:flex-1 max-w-4xl mt-10'>
-            <GitHubCalendar username="stanleyarmstrong" colorScheme={darkMode ? 'dark' : 'light'} />
+          <div className='w-full lg:flex-1 max-w-4xl'>
+            <GitHubCalendar username="stanleyarmstrong" cheme={darkMode ? 'dark' : 'light'} />
+              {content?.intro?.map((paragraph, index) => (
+                <p className='text-md mt-5' key={`intro-${index}`}>{paragraph}</p>
+              ))}
           </div>
         </div>
       </section>
@@ -76,24 +79,12 @@ export default function Home() {
             <ServiceCard key={`services-${index}`} title={service.title} reviews={service.reviews} description={service.description} tools={service.tools} />
           ))}
         </div>
-        <div className='text-l mt-5'>
-            <p className='font-light text-center mb-2'>
-              Book a time with me:
-            </p>
-        <div className='text-xl flex justify-center'>
-          <button className='bg-teal-700 hover:bg-orange-500 text-white rounded-xl font-semibold dark:bg-teal-400 dark:hover:bg-yellow-300 px-4'>
-            <a href='https://calendly.com/stanleyarmstrong31/30min'>
-            Book Now
-            </a>
-          </button>
-            </div>
-        </div>
 
       </section>
 
       <section id='experience' className='mt-8 scroll-mt-20'>
         <h2 className='text-left text-3xl hover:text-teal-700 dark:text-white dark:hover:text-teal-400'>
-          Previous Experience
+          Previous Professional Experience
         </h2>
         {content?.experience?.map((experience) => (
           <ExperienceCard key={experience.company} company={experience.company} title={experience.role} description={experience.description} />
@@ -101,12 +92,12 @@ export default function Home() {
       </section>
       <section id='socials' className='mt-6'>
       </section>
-      <footer className=' mt-4 mb-5 dark:text-white'>
+      <footer className=' dark:text-white'>
         <div className='flex flex-col items-center gap-10'>
         <h2 className='text-xl dark:text-white justify-self-start'>
           Connect With Me!
         </h2>
-        <ul className='flex gap-10 text-3xl'>
+        <ul className='flex gap-5 text-xl'>
           {content?.socials?.map((social) => (
             <SocialsCard key={social.name} name={social.name} url={social.url} hoverColor={social.hoverColor} />
           ))}

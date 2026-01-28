@@ -13,11 +13,15 @@ export interface Experience {
 
 export interface Service {
   title: string;
-  reviews: string[];
+  reviews: Review[];
   description: string[];
   tools: string[];
 }
 
+export interface Review {
+  content: string;
+  author: string;
+}
 export interface ContentData {
   name?: string;
   navItems?: string[];

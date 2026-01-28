@@ -1,3 +1,4 @@
+import { Review } from '@/types/content';
 import { SiUpwork, SiX, SiBluesky, SiLinkedin, SiYoutube, SiGithub } from 'react-icons/si';
 interface ExperienceCardProps {
   company: string;
@@ -13,7 +14,7 @@ export interface SocialsCardProps {
 
 export interface ServiceCardProps {
   title: string;
-  reviews: string[];
+  reviews: Review[];
   description: string[];
   tools: string[];
 }
@@ -24,18 +25,26 @@ export function ServiceCard({ title, reviews, description, tools }: ServiceCardP
             <h2 className='text-2xl hover:text-teal-700 dark:text-white dark:hover:text-teal-400'>
               {title}
             </h2>
-              {reviews.map((review, index) => (
-                <p className='font-light' key={`${title}-reviews-${index}`}>{review}</p>
-            ))}
+
             {description.map((desc, index) => (
-                <p className='font-light' key={`${title}-description-${index}`}>{desc}</p>
+                <p className='font-light p-2 text-md' key={`${title}-description-${index}`}>{desc}</p>
             ))}
-            <p>
-              Tools I Use:
-            </p>
-            <p className='font-light'>
-              {tools.join(', ')}
-            </p>
+
+            <h4 className='text-lg hover:text-teal-700 dark:text-white dark:hover:text-teal-400'>
+              Top Client Reviews:
+            </h4>
+            {reviews.map((review, index) => (
+                <p className='font-light text-md p-2' key={`${title}-reviews-${index}`}>{review.content} - <span className='italic'>{review.author}</span></p>
+            ))}
+            <div className='text-l mt-5'>
+              <div className='text-xl flex justify-center'>
+                <button className='bg-teal-700 hover:bg-orange-500 text-white rounded-xl font-semibold dark:bg-teal-400 dark:hover:bg-yellow-300 px-4'>
+                  <a href='https://calendly.com/stanleyarmstrong31/30min'>
+                    Let's Chat
+                  </a>
+                </button>
+              </div>
+            </div>
           </div>
     )
 }

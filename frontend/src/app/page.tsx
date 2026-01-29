@@ -62,7 +62,7 @@ export default function Home() {
             </div>
           </div>
           <div className='w-full lg:flex-1 max-w-4xl'>
-            <GitHubCalendar username="stanleyarmstrong" theme={darkMode ? 'dark' : 'light'} />
+            <GitHubCalendar username="stanleyarmstrong" colorScheme={darkMode ? 'dark' : 'light'} />
               {content?.intro?.map((paragraph, index) => (
                 <p className='text-md mt-5' key={`intro-${index}`}>{paragraph}</p>
               ))}

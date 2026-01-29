@@ -15,7 +15,7 @@ export interface Service {
   title: string;
   reviews: Review[];
   description: string[];
-  tools: string[];
+  tools?: string[];
 }
 
 export interface Review {
@@ -25,6 +25,7 @@ export interface Review {
 export interface ContentData {
   name?: string;
   navItems?: string[];
+  intro?: string[];
   services?: Service[];
   experience?: Experience[];
   socials?: SocialLink[];

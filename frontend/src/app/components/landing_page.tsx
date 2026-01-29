@@ -9,14 +9,14 @@ interface ExperienceCardProps {
 export interface SocialsCardProps {
   name: string;
   url: string;
-  hoverColor: string;
+  hoverColor?: string;
 }
 
 export interface ServiceCardProps {
   title: string;
   reviews: Review[];
   description: string[];
-  tools: string[];
+  tools?: string[];
 }
 
 export function ServiceCard({ title, reviews, description, tools }: ServiceCardProps) {

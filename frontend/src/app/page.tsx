@@ -7,13 +7,6 @@ import { GitHubCalendar } from 'react-github-calendar';
 import { ExperienceCard, NavItems, SocialsCard, ServiceCard } from './components/landing_page';
 import { ContentData } from '@/types/content';
 
-const NavButton = (isNavOpen: boolean) => {
-  if (isNavOpen) {
-    return  <RxCross1 />
-  }
-  return <RxHamburgerMenu />
-}
-
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

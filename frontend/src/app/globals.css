@@ -1,12 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-family-orbitron: "Orbitron", sans-serif;
 }
+
+@utility font-orbitron {
+  font-family: var(--font-family-orbitron);
+}
+
 
 html,
 body {
@@ -16,11 +19,10 @@ body {
 
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
 @font-face {
   font-family: 'Orbitron';
-  src: url('../../public/Orbitron-Medium.ttf');
+  src: url('/Orbitron-Medium.ttf');
 }

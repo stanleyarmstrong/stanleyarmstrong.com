@@ -41,7 +41,7 @@ export default function Home() {
               Stanley Armstrong
             </a>
           </h1>
-          <ul className='relative z-10 mr-20 hidden items-center gap-x-10 rounded-md bg-white/90 px-3 py-1.5 font-sans backdrop-blur-sm md:flex dark:bg-[#28303B]/90'>
+          <ul className='relative z-10 mr-20 hidden items-center gap-x-10 rounded-md bg-white/90 px-3 py-1.5 font-sans backdrop-blur-sm lg:flex dark:bg-[#28303B]/90'>
             <li className='cursor-pointer hover:text-teal-700 dark:text-white dark:hover:text-teal-400'>
               <button type='button' onClick={toggleDarkMode} aria-label='Toggle dark mode'>
                 <BsFillMoonFill />
@@ -53,7 +53,7 @@ export default function Home() {
           </ul>
           <button
             type='button'
-            className='relative z-10 rounded-md bg-white/90 p-2 text-3xl backdrop-blur-sm hover:text-teal-700 md:hidden dark:bg-[#28303B]/90 dark:text-white dark:hover:text-teal-400'
+            className='relative z-10 rounded-md bg-white/90 p-2 text-3xl backdrop-blur-sm hover:text-teal-700 lg:hidden dark:bg-[#28303B]/90 dark:text-white dark:hover:text-teal-400'
             aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             aria-expanded={mobileMenuOpen}
             aria-controls='mobile-navigation'
@@ -64,7 +64,7 @@ export default function Home() {
           {mobileMenuOpen && (
             <ul
               id='mobile-navigation'
-              className='absolute right-0 top-full z-10 mt-2 flex min-w-44 flex-col gap-4 rounded-md bg-white/90 p-4 font-sans shadow-lg backdrop-blur-sm md:hidden dark:bg-[#28303B]/90'
+              className='absolute right-0 top-full z-10 mt-2 flex min-w-44 flex-col gap-4 rounded-md bg-white/90 p-4 font-sans shadow-lg backdrop-blur-sm lg:hidden dark:bg-[#28303B]/90'
               onClick={() => setMobileMenuOpen(false)}
             >
               {navItems.map((item) => (
@@ -85,9 +85,9 @@ export default function Home() {
       </nav>
       </section>
       <section id='intro' className='scroll-mt-32 pt-32 mb-8'>
-        <div className='w-full max-w-6xl mx-auto flex flex-col justify-center lg:flex-row items-start lg:items-start gap-20 px-6'>
-          <div>
-            <div className='relative z-0 w-70 h-70 overflow-hidden rounded-full'>
+        <div className='w-full max-w-6xl mx-auto flex flex-col justify-center md:flex-row items-start gap-20 px-6 md:gap-8 lg:gap-20'>
+          <div className='shrink-0'>
+            <div className='relative z-0 w-70 h-70 overflow-hidden rounded-full md:h-56 md:w-56 lg:h-70 lg:w-70'>
               <Image
                 src={headshot}
                 alt='Portfolio Headshot'
@@ -96,8 +96,10 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className='w-full lg:flex-1 max-w-4xl'>
-            <GitHubCalendar username="stanleyarmstrong" colorScheme={darkMode ? 'dark' : 'light'} />
+          <div className='w-full min-w-0 max-w-4xl md:flex-1'>
+            <div className='w-full overflow-x-auto px-2 pb-2'>
+              <GitHubCalendar username="stanleyarmstrong" colorScheme={darkMode ? 'dark' : 'light'} />
+            </div>
               {content?.intro?.map((paragraph, index) => (
                 <p className='text-md mt-5' key={`intro-${index}`}>{paragraph}</p>
               ))}
@@ -109,7 +111,7 @@ export default function Home() {
         <h2 className='text-3xl mb-6 hover:text-teal-700 dark:text-white dark:hover:text-teal-400'>
           Services Offered
         </h2>
-        <div className='lg:flex-row flex flex-col justify-evenly '>
+        <div className='md:flex-row flex flex-col justify-evenly '>
           {content?.services?.map((service, index) => (
             <ServiceCard key={`services-${index}`} title={service.title} reviews={service.reviews} description={service.description} tools={service.tools} />
           ))}

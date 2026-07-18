@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { BsFillMoonFill } from 'react-icons/bs';
+import { BsFillMoonFill, BsList, BsX } from 'react-icons/bs';
 import Image from 'next/image';
 import headshot from '../../public/static/images/portfolio.jpg';
 import { GitHubCalendar } from 'react-github-calendar';
@@ -9,6 +9,7 @@ import { ContentData } from '@/types/content';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [content, setContent] = useState<ContentData | null>(null);
 
   const navItems = ['Services', 'Experience'];
@@ -33,26 +34,60 @@ export default function Home() {
   return (
     <>
     <main className='bg-white text-black min-h-screen dark:bg-[#28303B] dark:text-white px-10 pb-5'>
-    <section className='fixed top-0 w-full mt-3'>
-      <nav className='flex justify-between items-center'>
-          <h1 className='text-2xl bg-white dark:bg-[#28303B] hover:text-teal-700 font-orbitron dark:text-white dark:hover:text-teal-400'>
+    <section className='fixed top-0 left-0 z-50 mt-3 w-full px-4 sm:px-10'>
+      <nav className='relative flex items-center justify-between'>
+          <h1 className='relative z-10 rounded-md bg-white/90 px-3 py-1.5 text-lg backdrop-blur-sm hover:text-teal-700 font-orbitron sm:text-2xl dark:bg-[#28303B]/90 dark:text-white dark:hover:text-teal-400'>
             <a href='#intro'>
               Stanley Armstrong
             </a>
           </h1>
-          <ul className='flex items-center gap-x-10 font-sans mr-20 bg-white dark:bg-[#28303B]'>
-            <li className='hover:text-teal-700 dark:text-white dark:hover:text-teal-400 cursor-pointer'> <BsFillMoonFill
-            onClick={toggleDarkMode} /></li>
+          <ul className='relative z-10 mr-20 hidden items-center gap-x-10 rounded-md bg-white/90 px-3 py-1.5 font-sans backdrop-blur-sm md:flex dark:bg-[#28303B]/90'>
+            <li className='cursor-pointer hover:text-teal-700 dark:text-white dark:hover:text-teal-400'>
+              <button type='button' onClick={toggleDarkMode} aria-label='Toggle dark mode'>
+                <BsFillMoonFill />
+              </button>
+            </li>
             {navItems.map((item) => (
               <NavItems key={item} name={item} />
             ))}
           </ul>
+          <button
+            type='button'
+            className='relative z-10 rounded-md bg-white/90 p-2 text-3xl backdrop-blur-sm hover:text-teal-700 md:hidden dark:bg-[#28303B]/90 dark:text-white dark:hover:text-teal-400'
+            aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={mobileMenuOpen}
+            aria-controls='mobile-navigation'
+            onClick={() => setMobileMenuOpen((open) => !open)}
+          >
+            {mobileMenuOpen ? <BsX /> : <BsList />}
+          </button>
+          {mobileMenuOpen && (
+            <ul
+              id='mobile-navigation'
+              className='absolute right-0 top-full z-10 mt-2 flex min-w-44 flex-col gap-4 rounded-md bg-white/90 p-4 font-sans shadow-lg backdrop-blur-sm md:hidden dark:bg-[#28303B]/90'
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {navItems.map((item) => (
+                <NavItems key={item} name={item} />
+              ))}
+              <li>
+                <button
+                  type='button'
+                  className='flex items-center gap-2 hover:text-teal-700 dark:text-white dark:hover:text-teal-400'
+                  onClick={toggleDarkMode}
+                >
+                  <BsFillMoonFill />
+                  Toggle theme
+                </button>
+              </li>
+            </ul>
+          )}
       </nav>
       </section>
       <section id='intro' className='scroll-mt-32 pt-32 mb-8'>
         <div className='w-full max-w-6xl mx-auto flex flex-col justify-center lg:flex-row items-start lg:items-start gap-20 px-6'>
           <div>
-            <div className='relative w-70 h-70 overflow-hidden rounded-full '>
+            <div className='relative z-0 w-70 h-70 overflow-hidden rounded-full'>
               <Image
                 src={headshot}
                 alt='Portfolio Headshot'

@@ -15,7 +15,7 @@
     "eslint": "9.39.2",
     "eslint-config-next": "16.2.10",
     "github-calendar": "^2.3.4",
-    "js-yaml": "^4.1.1",
+    "js-yaml": "^4.3.1",
     "next": "16.2.10",
     "react": "19.2.3",
     "react-dom": "19.2.3",

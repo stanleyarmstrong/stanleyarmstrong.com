@@ -117,7 +117,7 @@ export default function Home() {
                   ))}
                 </p>
               )}
-              <div className='mt-4'>
+              <div className='mt-4 flex justify-center'>
                 <button className='bg-teal-700 hover:bg-orange-500 text-white rounded-xl font-semibold dark:bg-teal-400 dark:hover:bg-yellow-300 px-5 py-2'>
                   <a href='https://calendly.com/stanleyarmstrong31/30min'>
                     Book a Fit Call

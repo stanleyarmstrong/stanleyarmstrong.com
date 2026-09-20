@@ -101,20 +101,48 @@ export default function Home() {
               <GitHubCalendar username="stanleyarmstrong" colorScheme={darkMode ? 'dark' : 'light'} />
             </div>
               {content?.intro?.map((paragraph, index) => (
-                <p className='text-md mt-5' key={`intro-${index}`}>{paragraph}</p>
+                index === 0 ? (
+                  <h2 className='text-2xl font-semibold mt-5 hover:text-teal-700 dark:text-white dark:hover:text-teal-400' key={`intro-${index}`}>{paragraph}</h2>
+                ) : (
+                  <p className='text-md mt-5' key={`intro-${index}`}>{paragraph}</p>
+                )
               ))}
+              {content?.proof && content.proof.length > 0 && (
+                <p className='mt-3 text-xs sm:text-sm text-gray-500 dark:text-gray-400 leading-relaxed'>
+                  {content.proof.map((stat, index) => (
+                    <span key={`proof-${index}`}>
+                      {index > 0 && <span className='mx-2 text-gray-300 dark:text-gray-600'>&middot;</span>}
+                      {stat}
+                    </span>
+                  ))}
+                </p>
+              )}
+              <div className='mt-4'>
+                <button className='bg-teal-700 hover:bg-orange-500 text-white rounded-xl font-semibold dark:bg-teal-400 dark:hover:bg-yellow-300 px-5 py-2'>
+                  <a href='https://calendly.com/stanleyarmstrong31/30min'>
+                    Book a Fit Call
+                  </a>
+                </button>
+              </div>
           </div>
         </div>
       </section>
 
       <section id='services' className='mt-8 scroll-mt-20'>
         <h2 className='text-3xl mb-6 hover:text-teal-700 dark:text-white dark:hover:text-teal-400'>
-          Services Offered
+          How I Can Help
         </h2>
         <div className='md:flex-row flex flex-col justify-evenly '>
           {content?.services?.map((service, index) => (
-            <ServiceCard key={`services-${index}`} title={service.title} reviews={service.reviews} description={service.description} tools={service.tools} />
+            <ServiceCard key={`services-${index}`} title={service.title} idealFor={service.idealFor} cadence={service.cadence} reviews={service.reviews} description={service.description} tools={service.tools} focusAreas={service.focusAreas} />
           ))}
+        </div>
+        <div className='flex justify-center mt-8'>
+          <button className='bg-teal-700 hover:bg-orange-500 text-white rounded-xl font-semibold dark:bg-teal-400 dark:hover:bg-yellow-300 px-6 py-2 text-xl'>
+            <a href='https://calendly.com/stanleyarmstrong31/30min'>
+              Book a Fit Call
+            </a>
+          </button>
         </div>
 
       </section>

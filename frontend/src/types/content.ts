@@ -13,9 +13,12 @@ export interface Experience {
 
 export interface Service {
   title: string;
+  idealFor?: string;
+  cadence?: string;
   reviews: Review[];
   description: string[];
   tools?: string[];
+  focusAreas?: string[];
 }
 
 export interface Review {
@@ -26,6 +29,7 @@ export interface ContentData {
   name?: string;
   navItems?: string[];
   intro?: string[];
+  proof?: string[];
   services?: Service[];
   experience?: Experience[];
   socials?: SocialLink[];

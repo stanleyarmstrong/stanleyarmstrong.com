@@ -1,8 +1,13 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Stanley Armstrong Portfolio',
-  description: 'Built with Next.ts, TailwindCSS, and Django',
+  title: 'Stanley Armstrong | Fractional Full-Stack Development & Automation Partner',
+  description: 'I help operations-heavy businesses and lean startup teams ship full-stack products and build automation that saves thousands of hours a year — as an embedded partner, not a one-off contractor.',
+  openGraph: {
+    title: 'Stanley Armstrong | Fractional Full-Stack Development & Automation Partner',
+    description: 'I help operations-heavy businesses and lean startup teams ship full-stack products and build automation that saves thousands of hours a year.',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({

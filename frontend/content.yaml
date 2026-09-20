@@ -1,35 +1,56 @@
 intro:
- - "Hi- I'm Stanley Armstrong, I'm a Software Engineer with a passion for building web applications and helping people achieve their goals through technology. I'm currently a Tech Lead at Automotive Warranty Network, where I lead a team of 3 Software Engineers focused on building automated tools to improve our employee's daily tasks."
- - "In my free time, I enjoy learning more about what's happening in the field of Software Engineering and how I can apply my skills to help others."
+ - "Fractional Full-Stack Development & Automation Partner"
+ - "I help operations-heavy businesses and lean startup teams ship full-stack products and build the internal automation that saves them thousands of hours a year — without the overhead of a full-time hire."
+ - "I work with a small number of partners at a time, embedded in your team like an in-house engineer, so the systems I build actually get adopted, maintained, and trusted long after launch."
+
+proof:
+  - "2x dealer capacity scaled through automation, no added headcount"
+  - "Fortune 500 data pipelines built and maintained in production"
+  - "FDA/HIPAA-compliant medical device software shipped"
+  - "4+ years professional full-stack & automation experience"
+
 services:
-  - title: "Full Stack Development"
+  - title: "Build & Rescue Your Sprint"
+    idealFor: "Teams that need a working product shipped, or a stalled/broken project rescued, FAST."
+    cadence: "Fixed Scope"
+    tools: ["React", "Next.js", "TypeScript", "JavaScript", "Python", "Django", "FastAPI", "Pandas", "Playwright", "Airflow", "Spark", "SQL"]
     reviews:
-      - content: "\"He took a project that was halfway done and re-architected it to be an impressive web app. Skilled up and down the tech stack, he designed and implemented a backend, directed the frontend efforts and came up with clever solutions whenever problems crept up (recreating web scrapers, troubleshooting database issues and identifying opportunities to automate processes at every turn). Great communicator, offered contributions on the marketing and strategic side as well. I especially appreciate his off-hours support as needed (on more than a few occasions). Really hope I get to work with him again.\""
-        author: "John Shields, Whenzy"
       - content: "\"I had the pleasure of working with him on a Python programming project, and I couldn't be more impressed with his work. Not only did he deliver exceptional results with his programming skills, but his ability to communicate and work effectively with my client was outstanding. He approached the project with professionalism, attention to detail, and a clear understanding of requirements. His expertise in Python programming is top-notch, and he consistently went above and beyond to ensure everything ran smoothly. I highly recommend him for anyone looking for a talented and reliable developer!\""
         author: "Valerie Noblitt, Diogras Consulting"
     description:
-      - "Have an app idea? Or maybe your existing app has a nasty bug that you've spent a considerable amount of time trying to fix? Let me help you with that!"
-      - "With over 4 years of Full Stack development experience, I understand that your project is more than just code, it's something bigger. It's your vision. It's your passion. It's the thing that you want to share with the world and solve real world problems. In the past, I've helped clients launch new products, rescue struggling projects, and automate processes that save thousands of working hours. My approach combines technical expertise with clear communication, strategic thinking, and unreasonable hospitality ensuring you get solutions that not only work for your business or project, but for you as well."
+      - "Have an app idea, a launch deadline, or an existing app with a bug you've spent too long chasing? This is the fastest way to get unstuck."
+      - "I've re-architected half-finished apps into production-ready products and shipped new ones from scratch, combining technical execution with clear communication and unreasonable hospitality — so you get a solution that works for both you and your business. Consider this a trial run: I'll solve your immediate problem now, and if there's a mutual fit, we continue building projects together with me in a Fractional Tech Lead capacity."
+
+  - title: "Fractional Tech Lead"
+    idealFor: "Founders and operations-heavy teams who need senior engineering leadership and automation, without a full-time hire."
+    cadence: "Ongoing Retainer"
+    focusAreas: ["Full Stack Web Development", "Automation and ETL"]
+    reviews:
+      - content: "\"He took a project that was halfway done and re-architected it to be an impressive web app. Skilled up and down the tech stack, he designed and implemented a backend, directed the frontend efforts and came up with clever solutions whenever problems crept up (recreating web scrapers, troubleshooting database issues and identifying opportunities to automate processes at every turn). Great communicator, offered contributions on the marketing and strategic side as well. I especially appreciate his off-hours support as needed (on more than a few occasions). Really hope I get to work with him again.\""
+        author: "John Shields, Whenzy"
+    description:
+      - "You don't need another contractor who disappears after the sprint. You need someone who understands the whole system — product, architecture, and the people who use it — and sticks around to own it."
+      - "I work with your team as a technical lead: reviewing existing architecture, setting standards, reviewing and shipping code, and improving the internal systems and processes that take repetitive work off your team's plate — the same kind of work that helped scale a dealer network's operations 2x without adding to the headcount. This is the same role I've operated in leading engineering teams end to end, brought to your team on a fractional basis as you need it and for less than a full-time hire."
+      - "Many of my Fractional Tech Lead clients start here after a successfully recovered sprint — I've already proven I know your codebase and how your team works, so there's no ramp-up period necessary."
 
 experience:
   - company: "Automotive Warranty Network"
     role: "Automation Team Lead and Software Engineer"
-    description: 
+    description:
     - "I joined Automative Warranty Network around 2 years ago as a Software Engineering consultant to scale the company's web application, C.A.R.S, to service 2x as many dealers since I joined. After the initial project, I joined the company full time as a Software Engineer and was promoted to the role of Automation Team Lead where I currently lead a team of 3 Software Engineers focused on building automated workflows to improve our employee's daily tasks."
     - "Similar to my previous experience, I was tasked to wear multiple hats working on Full Stack software development and automation projects. While working on the C.A.R.S project, this took shape in the form of fixing bugs and implementing new features on our Django and Django REST application and even releasing a mobile app that is available on the App and Google Play stores. In the automation project, this has taken form by designing and implementing infrastructure with Kubernetes, creating a REST APIs with Django, and building browser automations with Playwright to build out automated workflows for our employees."
 
   - company: "Advana"
     role: "Software Engineer - Data Engineering"
-    description: 
+    description:
     - "At Advana, I decided to expand my skillset and transition from a Full Stack Software Engineer to a Data Engineer. While both roles require a strong understanding of software development, data engineering specializes in building scalable and efficient data strategies in order to support both the company's business goals and the needs of our Fortune 500 clients."
     - "Data strategy primarily focused on building efficient ETL pipelines and efficient data storage solutions. This process included finding Open Source tooling such as Apache Airflow and Spark to optimize where the data was processed. To optimize the storage, I implemented a data warehousing strategy that segmented data on S3 with parquet files to fit both client facing as well as internal reports."
 
   - company: "Promaxo"
     role: "Software Engineer"
-    description: 
+    description:
     - "Promaxo was my introduction to startup culture and working in an interdisciplinary team. At Promaxo, I was part of a team of 4 Software Engineers focused on developing high quality software solutions that would be used by doctors to enhance the accuracy and treatment of prostate cancer."
-    - "Due to the nature of the environment, I was tasked to wear multiple hats and learn new skills quickly to help the company succeed. Whether this meant working on embedded systems, web applications, or improving our manufacturing processes, I was always eager to take up the challenge and learn something new to meet our goals and improve our product. The field of the work also introduced me to following regulatory practices and standards that medical devices must follow to be compliant with the FDA and HIPAA." 
+    - "Due to the nature of the environment, I was tasked to wear multiple hats and learn new skills quickly to help the company succeed. Whether this meant working on embedded systems, web applications, or improving our manufacturing processes, I was always eager to take up the challenge and learn something new to meet our goals and improve our product. The field of the work also introduced me to following regulatory practices and standards that medical devices must follow to be compliant with the FDA and HIPAA."
 
 socials:
   - name: "Upwork"
@@ -39,7 +60,7 @@ socials:
   - name: "BlueSky"
     url: "https://bsky.app/profile/stanleycodes.bsky.social"
     hoverColor: "hover:text-blue-500"
-  
+
   - name: "Twitter"
     url: "https://x.com/stanleycodes40"
     hoverColor: "hover:text-blue-500"
@@ -47,11 +68,11 @@ socials:
   - name: "GitHub"
     url: "https://github.com/stanleyarmstrong"
     hoverColor: "hover:text-green-800"
-  
+
   - name: "LinkedIn"
     url: "https://www.linkedin.com/in/stanleycodes40/"
     hoverColor: "hover:text-blue-700"
-  
+
   - name: "YouTube"
     url: "https://www.youtube.com/@stanleycodes4340"
     hoverColor: "hover:text-red-600"

@@ -31,26 +31,32 @@ services:
     description:
       - "You don't need another contractor who disappears after the sprint. You need someone who understands the whole system — product, architecture, and the people who use it — and sticks around to own it."
       - "I work with your team as a technical lead: reviewing existing architecture, setting standards, reviewing and shipping code, and improving the internal systems and processes that take repetitive work off your team's plate — the same kind of work that helped scale a dealer network's operations 2x without adding to the headcount. This is the same role I've operated in leading engineering teams end to end, brought to your team on a fractional basis as you need it and for less than a full-time hire."
-      - "Many of my Fractional Tech Lead clients start here after a successfully recovered sprint — I've already proven I know your codebase and how your team works, so there's no ramp-up period necessary."
+      - "This retainer is designed to follow a successful Fixed Scope Sprint — by then, I've already proven I know your codebase and how your team works, so there's no ramp-up period necessary."
 
 experience:
   - company: "Automotive Warranty Network"
     role: "Automation Team Lead and Software Engineer"
     description:
-    - "I joined Automative Warranty Network around 2 years ago as a Software Engineering consultant to scale the company's web application, C.A.R.S, to service 2x as many dealers since I joined. After the initial project, I joined the company full time as a Software Engineer and was promoted to the role of Automation Team Lead where I currently lead a team of 3 Software Engineers focused on building automated workflows to improve our employee's daily tasks."
-    - "Similar to my previous experience, I was tasked to wear multiple hats working on Full Stack software development and automation projects. While working on the C.A.R.S project, this took shape in the form of fixing bugs and implementing new features on our Django and Django REST application and even releasing a mobile app that is available on the App and Google Play stores. In the automation project, this has taken form by designing and implementing infrastructure with Kubernetes, creating a REST APIs with Django, and building browser automations with Playwright to build out automated workflows for our employees."
+    - "Scaled the company's dealer platform, C.A.R.S., to serve 2x as many dealers, then built the automation systems — Kubernetes infrastructure, Django REST APIs, and Playwright browser automations — that took hundreds of manual hours a month off the team's plate, without adding headcount."
+    - "Joined as a Software Engineering consultant and was promoted to Automation Team Lead, leading a team of 3 engineers building automated workflows and shipping features across web and mobile (App Store and Google Play)."
+
+  - company: "Whenzy"
+    role: "Fractional Tech Lead"
+    description:
+    - "Took over a stalled build, re-architected it, and shipped it to production — deploying Whenzy to its live domain."
+    - "Fixed the site's web scrapers to run reliably on an automated schedule, then designed and implemented new features as the product grew."
 
   - company: "Advana"
     role: "Software Engineer - Data Engineering"
     description:
-    - "At Advana, I decided to expand my skillset and transition from a Full Stack Software Engineer to a Data Engineer. While both roles require a strong understanding of software development, data engineering specializes in building scalable and efficient data strategies in order to support both the company's business goals and the needs of our Fortune 500 clients."
-    - "Data strategy primarily focused on building efficient ETL pipelines and efficient data storage solutions. This process included finding Open Source tooling such as Apache Airflow and Spark to optimize where the data was processed. To optimize the storage, I implemented a data warehousing strategy that segmented data on S3 with parquet files to fit both client facing as well as internal reports."
+    - "Built and maintained ETL pipelines and an S3-based, parquet-backed data warehousing strategy supporting both internal and client-facing reporting for Fortune 500 clients."
+    - "Transitioned from full-stack development into data engineering, using Apache Airflow and Spark to optimize where and how data was processed at scale."
 
   - company: "Promaxo"
     role: "Software Engineer"
     description:
-    - "Promaxo was my introduction to startup culture and working in an interdisciplinary team. At Promaxo, I was part of a team of 4 Software Engineers focused on developing high quality software solutions that would be used by doctors to enhance the accuracy and treatment of prostate cancer."
-    - "Due to the nature of the environment, I was tasked to wear multiple hats and learn new skills quickly to help the company succeed. Whether this meant working on embedded systems, web applications, or improving our manufacturing processes, I was always eager to take up the challenge and learn something new to meet our goals and improve our product. The field of the work also introduced me to following regulatory practices and standards that medical devices must follow to be compliant with the FDA and HIPAA."
+    - "Shipped FDA/HIPAA-compliant medical device software as part of a 4-engineer team, improving the accuracy and treatment of prostate cancer for the doctors using the product."
+    - "Worked across embedded systems, web applications, and manufacturing process improvements — learning regulatory compliance requirements along the way — in a startup environment that required wearing multiple hats and learning quickly."
 
 socials:
   - name: "Upwork"

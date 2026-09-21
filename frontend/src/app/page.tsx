@@ -12,7 +12,7 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [content, setContent] = useState<ContentData | null>(null);
 
-  const navItems = ['Services', 'Experience'];
+  const navItems = ['Services', 'Results'];
 
   useEffect(() => {
     const isDark = document.documentElement.classList.contains('dark');
@@ -117,14 +117,14 @@ export default function Home() {
                   ))}
                 </p>
               )}
-              <div className='mt-4 flex justify-center'>
-                <button className='bg-teal-700 hover:bg-orange-500 text-white rounded-xl font-semibold dark:bg-teal-400 dark:hover:bg-yellow-300 px-5 py-2'>
-                  <a href='https://calendly.com/stanleyarmstrong31/30min'>
-                    Book a Fit Call
-                  </a>
-                </button>
-              </div>
           </div>
+        </div>
+        <div className='w-full max-w-6xl mx-auto flex justify-center mt-6 px-6'>
+          <button className='bg-teal-700 hover:bg-orange-500 text-white rounded-xl font-semibold dark:bg-teal-400 dark:hover:bg-yellow-300 px-5 py-2'>
+            <a href='https://calendly.com/stanleyarmstrong31/30min'>
+              Book a Fit Call
+            </a>
+          </button>
         </div>
       </section>
 
@@ -137,19 +137,20 @@ export default function Home() {
             <ServiceCard key={`services-${index}`} title={service.title} idealFor={service.idealFor} cadence={service.cadence} reviews={service.reviews} description={service.description} tools={service.tools} focusAreas={service.focusAreas} />
           ))}
         </div>
-        <div className='flex justify-center mt-8'>
+        <div className='flex flex-col items-center mt-8 gap-2'>
           <button className='bg-teal-700 hover:bg-orange-500 text-white rounded-xl font-semibold dark:bg-teal-400 dark:hover:bg-yellow-300 px-6 py-2 text-xl'>
             <a href='https://calendly.com/stanleyarmstrong31/30min'>
               Book a Fit Call
             </a>
           </button>
+          <p className='text-xs text-gray-500 dark:text-gray-400'>Limited availability for new partners</p>
         </div>
 
       </section>
 
-      <section id='experience' className='mt-8 scroll-mt-20'>
+      <section id='results' className='mt-8 scroll-mt-20'>
         <h2 className='text-left text-3xl hover:text-teal-700 dark:text-white dark:hover:text-teal-400'>
-          Previous Professional Experience
+          Results
         </h2>
         {content?.experience?.map((experience) => (
           <ExperienceCard key={experience.company} company={experience.company} title={experience.role} description={experience.description} />

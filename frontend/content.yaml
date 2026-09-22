@@ -19,10 +19,10 @@ services:
         author: "Valerie Noblitt, Diogras Consulting"
     description:
       - "Have an app idea, a launch deadline, or an existing app with a bug you've spent too long chasing? This is the fastest way to get unstuck."
-      - "I've re-architected half-finished apps into production-ready products and shipped new ones from scratch, combining technical execution with clear communication and unreasonable hospitality — so you get a solution that works for both you and your business. Consider this a trial run: I'll solve your immediate problem now, and if there's a mutual fit, we continue building projects together with me in a Fractional Tech Lead capacity."
+      - "I've re-architected half-finished apps into production-ready products and shipped new ones from scratch, combining technical execution with clear communication and unreasonable hospitality — so you get a solution that works for both you and your business. Consider this a trial run: I'll solve your immediate problem now, and if there's a mutual fit, we continue building projects together with me as your Ongoing Engineering Partner."
 
-  - title: "Fractional Tech Lead"
-    idealFor: "Founders and operations-heavy teams who need senior engineering leadership and automation, without a full-time hire."
+  - title: "Ongoing Engineering Partner"
+    idealFor: "Founders and operations-heavy teams who need senior engineering support and automation, without a full-time hire."
     cadence: "Ongoing Retainer"
     focusAreas: ["Full Stack Web Development", "Automation and ETL"]
     reviews:
@@ -30,7 +30,7 @@ services:
         author: "John Shields, Whenzy"
     description:
       - "You don't need another contractor who disappears after the sprint. You need someone who understands the whole system — product, architecture, and the people who use it — and sticks around to own it."
-      - "I work with your team as a technical lead: reviewing existing architecture, setting standards, reviewing and shipping code, and improving the internal systems and processes that take repetitive work off your team's plate — the same kind of work that helped scale a dealer network's operations 2x without adding to the headcount. This is the same role I've operated in leading engineering teams end to end, brought to your team on a fractional basis as you need it and for less than a full-time hire."
+      - "I work alongside your team as an embedded engineering partner: reviewing architecture, contributing to standards, shipping code, and improving the internal systems and processes that take repetitive work off your team's plate — the same kind of work that helped scale a dealer network's operations 2x without adding to the headcount. This is the same kind of work I've done leading engineering initiatives end to end, brought to your team fractionally, as you need it, and for less than a full-time hire."
       - "This retainer is designed to follow a successful Fixed Scope Sprint — by then, I've already proven I know your codebase and how your team works, so there's no ramp-up period necessary."
 
 experience:
@@ -41,7 +41,7 @@ experience:
     - "Joined as a Software Engineering consultant and was promoted to Automation Team Lead, leading a team of 3 engineers building automated workflows and shipping features across web and mobile (App Store and Google Play)."
 
   - company: "Whenzy"
-    role: "Fractional Tech Lead"
+    role: "Ongoing Engineering Partner"
     description:
     - "Took over a stalled build, re-architected it, and shipped it to production — deploying Whenzy to its live domain."
     - "Fixed the site's web scrapers to run reliably on an automated schedule, then designed and implemented new features as the product grew."

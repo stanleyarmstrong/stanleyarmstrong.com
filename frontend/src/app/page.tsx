@@ -119,12 +119,13 @@ export default function Home() {
               )}
           </div>
         </div>
-        <div className='w-full max-w-6xl mx-auto flex justify-center mt-6 px-6'>
+        <div className='w-full max-w-6xl mx-auto flex flex-col items-center mt-6 px-6 gap-2'>
           <button className='bg-teal-700 hover:bg-orange-500 text-white rounded-xl font-semibold dark:bg-teal-400 dark:hover:bg-yellow-300 px-5 py-2'>
             <a href='https://calendar.app.google/romAGcoWuzukrfn76'>
-              Book a Fit Call
+              Book a Discovery Call
             </a>
           </button>
+          <p className='text-xs text-gray-500 dark:text-gray-400'>Limited availability for new partners</p>
         </div>
       </section>
 
@@ -140,7 +141,7 @@ export default function Home() {
         <div className='flex flex-col items-center mt-8 gap-2'>
           <button className='bg-teal-700 hover:bg-orange-500 text-white rounded-xl font-semibold dark:bg-teal-400 dark:hover:bg-yellow-300 px-6 py-2 text-xl'>
             <a href='https://calendar.app.google/romAGcoWuzukrfn76'>
-              Book a Fit Call
+              Book a Discovery Call
             </a>
           </button>
           <p className='text-xs text-gray-500 dark:text-gray-400'>Limited availability for new partners</p>

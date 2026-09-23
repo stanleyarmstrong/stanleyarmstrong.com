@@ -139,7 +139,7 @@ export default function Home() {
         </div>
         <div className='flex flex-col items-center mt-8 gap-2'>
           <button className='bg-teal-700 hover:bg-orange-500 text-white rounded-xl font-semibold dark:bg-teal-400 dark:hover:bg-yellow-300 px-6 py-2 text-xl'>
-            <a href='https://calendly.com/stanleyarmstrong31/30min'>
+            <a href='https://calendar.app.google/romAGcoWuzukrfn76'>
               Book a Fit Call
             </a>
           </button>

@@ -14,37 +14,63 @@ export interface SocialsCardProps {
 
 export interface ServiceCardProps {
   title: string;
+  idealFor?: string;
+  cadence?: string;
   reviews: Review[];
   description: string[];
   tools?: string[];
+  focusAreas?: string[];
 }
 
-export function ServiceCard({ title, reviews, description, tools }: ServiceCardProps) {
+export function ServiceCard({ title, idealFor, cadence, reviews, description, tools, focusAreas }: ServiceCardProps) {
     return (
           <div className='shadow-lg rounded-xl flex-1 p-10'>
             <h2 className='text-2xl hover:text-teal-700 dark:text-white dark:hover:text-teal-400'>
               {title}
             </h2>
+            {cadence && (
+                <p className='font-semibold text-xs uppercase tracking-wide text-teal-700 dark:text-teal-400 mt-1'>Project Type: {cadence}</p>
+            )}
+            {idealFor && (
+                <p className='font-light italic text-sm p-2 text-gray-600 dark:text-gray-300'>Ideal for: {idealFor}</p>
+            )}
 
             {description.map((desc, index) => (
                 <p className='font-light p-2 text-md' key={`${title}-description-${index}`}>{desc}</p>
             ))}
 
-            <h4 className='text-lg hover:text-teal-700 dark:text-white dark:hover:text-teal-400'>
-              Top Client Reviews:
-            </h4>
-            {reviews.map((review, index) => (
-                <p className='font-light text-md p-2' key={`${title}-reviews-${index}`}>{review.content} - <span className='italic'>{review.author}</span></p>
-            ))}
-            <div className='text-l mt-5'>
-              <div className='text-xl flex justify-center'>
-                <button className='bg-teal-700 hover:bg-orange-500 text-white rounded-xl font-semibold dark:bg-teal-400 dark:hover:bg-yellow-300 px-4'>
-                  <a href='https://calendly.com/stanleyarmstrong31/30min'>
-                    Let's Chat
-                  </a>
-                </button>
-              </div>
-            </div>
+            {focusAreas && focusAreas.length > 0 && (
+                <div className='p-2'>
+                    <p className='text-xs uppercase tracking-wide text-gray-400 dark:text-gray-500 mb-1'>Focus Areas</p>
+                    <div className='flex flex-wrap gap-2'>
+                        {focusAreas.map((area, index) => (
+                            <span className='text-xs font-light px-2 py-1 rounded-full border border-teal-700 text-teal-700 dark:border-teal-400 dark:text-teal-400' key={`${title}-focus-${index}`}>{area}</span>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {tools && tools.length > 0 && (
+                <div className='p-2'>
+                    <p className='text-xs uppercase tracking-wide text-gray-400 dark:text-gray-500 mb-1'>Tools</p>
+                    <div className='flex flex-wrap gap-2'>
+                        {tools.map((tool, index) => (
+                            <span className='text-xs font-light px-2 py-1 rounded-full border border-teal-700 text-teal-700 dark:border-teal-400 dark:text-teal-400' key={`${title}-tool-${index}`}>{tool}</span>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {reviews.length > 0 && (
+                <>
+                    <h4 className='text-lg hover:text-teal-700 dark:text-white dark:hover:text-teal-400'>
+                        Top Client Reviews:
+                    </h4>
+                    {reviews.map((review, index) => (
+                        <p className='font-light text-md p-2' key={`${title}-reviews-${index}`}>{review.content} - <span className='italic'>{review.author}</span></p>
+                    ))}
+                </>
+            )}
           </div>
     )
 }

@@ -12,6 +12,7 @@
     "@types/node": "25.0.3",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
+    "@vercel/analytics": "^2.0.1",
     "eslint": "9.39.2",
     "eslint-config-next": "16.2.10",
     "github-calendar": "^2.3.4",
